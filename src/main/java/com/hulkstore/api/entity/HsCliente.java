@@ -35,6 +35,9 @@ public class HsCliente implements Serializable {
 
 	@Column(name = "cli_email")
 	private String cliEmail;
+	
+	@Column(name = "cli_password")
+	private String cliPasword;
 
 	@Column(name = "cli_pais")
 	private String cliPais;
@@ -62,8 +65,8 @@ public class HsCliente implements Serializable {
 		return cliId;
 	}
 
-	public void setCliId(Long cli_id) {
-		this.cliId = cli_id;
+	public void setCliId(Long cliId) {
+		this.cliId = cliId;
 	}
 
 	public String getCliNombre() {
@@ -96,6 +99,14 @@ public class HsCliente implements Serializable {
 
 	public void setCliEmail(String cliEmail) {
 		this.cliEmail = cliEmail;
+	}
+
+	public String getCliPasword() {
+		return cliPasword;
+	}
+
+	public void setCliPasword(String cliPasword) {
+		this.cliPasword = cliPasword;
 	}
 
 	public String getCliPais() {
