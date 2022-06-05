@@ -28,6 +28,9 @@ public class HsProducto implements Serializable {
 
 	@Column(name = "pro_nombre")
 	private String proNombre;
+	
+	@Column(name = "pro_image")
+	private String proImage;
 
 	@ManyToOne
 	@JoinColumn(name = "tip_id")
@@ -63,6 +66,14 @@ public class HsProducto implements Serializable {
 
 	public void setProNombre(String proNombre) {
 		this.proNombre = proNombre;
+	}
+
+	public String getProImage() {
+		return proImage;
+	}
+
+	public void setProImage(String proImage) {
+		this.proImage = proImage;
 	}
 
 	public HsTipoProducto getTipId() {

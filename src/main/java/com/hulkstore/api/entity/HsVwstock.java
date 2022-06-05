@@ -12,24 +12,33 @@ import org.hibernate.annotations.Immutable;
 
 @Entity
 @Immutable
-public class HsVwstock implements Serializable{
+public class HsVwstock implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "pro_id",updatable = false, nullable = false)
+	@Column(name = "pro_id", updatable = false, nullable = false)
 	private Long proId;
 
 	@Column(name = "pro_nombre")
 	private String proNombre;
 	
+	@Column(name = "pro_image")
+	private String proImage;
+
+	@Column(name = "tip_nombre")
+	private String tipNombre;
+
+	@Column(name = "tip_id")
+	private Long tipId;
+
 	@Column(name = "ingreso")
 	private int ingreso;
-	
+
 	@Column(name = "vendido")
 	private int vendido;
-	
+
 	@Column(name = "disponible")
 	private int disponible;
 
@@ -47,6 +56,30 @@ public class HsVwstock implements Serializable{
 
 	public void setProNombre(String proNombre) {
 		this.proNombre = proNombre;
+	}
+
+	public String getProImage() {
+		return proImage;
+	}
+
+	public void setProImage(String proImage) {
+		this.proImage = proImage;
+	}
+
+	public String getTipNombre() {
+		return tipNombre;
+	}
+
+	public void setTipNombre(String tipNombre) {
+		this.tipNombre = tipNombre;
+	}
+
+	public Long getTipId() {
+		return tipId;
+	}
+
+	public void setTipId(Long tipId) {
+		this.tipId = tipId;
 	}
 
 	public int getIngreso() {
@@ -72,6 +105,6 @@ public class HsVwstock implements Serializable{
 	public void setDisponible(int disponible) {
 		this.disponible = disponible;
 	}
-	
-	
+
+
 }
