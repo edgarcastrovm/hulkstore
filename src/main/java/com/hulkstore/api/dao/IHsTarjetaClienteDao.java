@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.hulkstore.api.entity.HsTarjetaCliente;
 
-public interface IHsTarjetaCliente extends CrudRepository<HsTarjetaCliente, Long>{
+public interface IHsTarjetaClienteDao extends CrudRepository<HsTarjetaCliente, Long>{
 
 }

@@ -32,6 +32,15 @@ public class HsVenta implements Serializable {
 	@OneToOne
 	@JoinColumn(name = "pag_id")
 	private HsPago pagId;
+
+	@Column(name = "ven_subtotal")
+	private Double venSubtotal;
+	
+	@Column(name = "ven_iva")
+	private Double venIva;
+	
+	@Column(name = "ven_total")
+	private Double venTotal;
 	
 	@Column(name = "ven_fecha")
 	@Temporal(TemporalType.TIMESTAMP)

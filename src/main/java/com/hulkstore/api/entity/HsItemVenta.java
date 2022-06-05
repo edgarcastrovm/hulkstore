@@ -34,6 +34,15 @@ public class HsItemVenta implements Serializable {
 	@JoinColumn(name = "ven_id")
 	private HsVenta venId;
 
+	@Column(name = "itv_unidad")
+	private int itvUnidad;
+
+	@Column(name = "itv_valor_unidad")
+	private Double itvValorUnidad;
+
+	@Column(name = "itv_valor_total")
+	private Double itvValorTotal;
+
 	@Column(name = "itv_fecha")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date itvFecha;
@@ -69,6 +78,30 @@ public class HsItemVenta implements Serializable {
 
 	public void setVenId(HsVenta venId) {
 		this.venId = venId;
+	}
+
+	public int getItvUnidad() {
+		return itvUnidad;
+	}
+
+	public void setItvUnidad(int itvUnidad) {
+		this.itvUnidad = itvUnidad;
+	}
+
+	public Double getItvValorUnidad() {
+		return itvValorUnidad;
+	}
+
+	public void setItvValorUnidad(Double itvValorUnidad) {
+		this.itvValorUnidad = itvValorUnidad;
+	}
+
+	public Double getItvValorTotal() {
+		return itvValorTotal;
+	}
+
+	public void setItvValorTotal(Double itvValorTotal) {
+		this.itvValorTotal = itvValorTotal;
 	}
 
 	public Date getItvFecha() {

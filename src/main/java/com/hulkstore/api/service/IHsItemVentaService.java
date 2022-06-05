@@ -6,6 +6,10 @@ import com.hulkstore.api.entity.HsItemVenta;
 
 public interface IHsItemVentaService {
 	
+	public HsItemVenta buscarPorId(Long itvId);
+	
+	public List<HsItemVenta> buscarTodos(Long itvId);
+	
 	public void registroItemVenta(HsItemVenta itemVenta);
 
 	public void addListItemVenta(List<HsItemVenta> listItemVenta);

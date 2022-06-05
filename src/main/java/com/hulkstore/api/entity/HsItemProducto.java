@@ -32,6 +32,9 @@ public class HsItemProducto implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "pro_id")
 	private HsProducto proId;
+	
+	@Column(name = "itv_unidad")
+	private int itvUnidad;
 
 	@Column(name = "itp_fecha")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -44,14 +47,15 @@ public class HsItemProducto implements Serializable {
 	public void prePersist() {
 		this.itpFecha = new Date();
 		this.itpEstado = "ACTIVO";
+		this.itvUnidad = 1;
 	}
 
 	public Long getItpId() {
 		return itpId;
 	}
 
-	public void setItpId(Long itp_id) {
-		this.itpId = itp_id;
+	public void setItpId(Long itpId) {
+		this.itpId = itpId;
 	}
 
 	public String getItpSerie() {
@@ -68,6 +72,14 @@ public class HsItemProducto implements Serializable {
 
 	public void setProId(HsProducto proId) {
 		this.proId = proId;
+	}
+
+	public int getItvUnidad() {
+		return itvUnidad;
+	}
+
+	public void setItvUnidad(int itvUnidad) {
+		this.itvUnidad = itvUnidad;
 	}
 
 	public Date getItpFecha() {

@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.hulkstore.api.entity.HsItemVenta;
 
-public interface IHsItemVenta extends CrudRepository<HsItemVenta, Long>{
+public interface IHsItemVentaDao extends CrudRepository<HsItemVenta, Long>{
 
 }

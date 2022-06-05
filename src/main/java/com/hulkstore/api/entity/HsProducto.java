@@ -29,12 +29,10 @@ public class HsProducto implements Serializable {
 	@Column(name = "pro_nombre")
 	private String proNombre;
 
-	// @Column(name="tip_id")
 	@ManyToOne
-	@JoinColumn(name = "tipId")
+	@JoinColumn(name = "tip_id")
 	private HsTipoProducto tipId;
-	// private Long tipId;
-
+	
 	@Column(name = "pro_valor")
 	private Double proValor;
 
@@ -55,8 +53,8 @@ public class HsProducto implements Serializable {
 		return proId;
 	}
 
-	public void setProId(Long pro_id) {
-		this.proId = pro_id;
+	public void setProId(Long proId) {
+		this.proId = proId;
 	}
 
 	public String getProNombre() {
