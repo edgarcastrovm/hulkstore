@@ -23,9 +23,12 @@ public class HsVwstock implements Serializable {
 
 	@Column(name = "pro_nombre")
 	private String proNombre;
-	
+
 	@Column(name = "pro_image")
 	private String proImage;
+
+	@Column(name = "pro_valor")
+	private String proValor;
 
 	@Column(name = "tip_nombre")
 	private String tipNombre;
@@ -64,6 +67,14 @@ public class HsVwstock implements Serializable {
 
 	public void setProImage(String proImage) {
 		this.proImage = proImage;
+	}
+
+	public String getProValor() {
+		return proValor;
+	}
+
+	public void setProValor(String proValor) {
+		this.proValor = proValor;
 	}
 
 	public String getTipNombre() {
@@ -105,6 +116,5 @@ public class HsVwstock implements Serializable {
 	public void setDisponible(int disponible) {
 		this.disponible = disponible;
 	}
-
 
 }
